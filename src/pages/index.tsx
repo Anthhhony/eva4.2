@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Button, Container, Form, Modal, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Overlay, OverlayTrigger } from "react-bootstrap";
 import Link from "next/link";
 import { Usuarioadmin } from "../Interface/IUsuarioadmin";
-import { buscarContraseña, obtenerUsuario, obtenerUsuarios } from "./Firebase/Promesas";
+import { buscarContraseña, obtenerUsuario, obtenerUsuarios } from "../styles/Firebase/Promesas";
 
 
 export default function Home() {

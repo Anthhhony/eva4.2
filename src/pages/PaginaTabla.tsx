@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Button, Container, FormControl, InputGroup, Modal, Table } from "react-bootstrap";
 import { FaSearch } from "react-icons/fa";
 import { Usuario } from "../Interface/IUsuario";
-import { eliminarUsuario, obtenerUsuario, obtenerUsuarios } from "./Firebase/Promesas";
+import { eliminarUsuario, obtenerUsuario, obtenerUsuarios } from "../styles/Firebase/Promesas";
 import { MdEditDocument, MdOutlineDelete } from "react-icons/md";
 import { CiEdit } from "react-icons/ci";
 import { useRouter } from "next/router";

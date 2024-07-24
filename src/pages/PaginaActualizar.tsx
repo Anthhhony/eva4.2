@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { Usuario } from "../Interface/IUsuario";
 import { Button, Form } from "react-bootstrap";
-import { actualizarUsuario, obtenerUsuario } from "./Firebase/Promesas";
+import { actualizarUsuario, obtenerUsuario } from "../styles/Firebase/Promesas";
 import Link from "next/link";
 
 const estadoInicial:Usuario = {

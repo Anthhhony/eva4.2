@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
-import { registrarUsuario } from "./Firebase/Promesas";
+import { registrarUsuario } from "../styles/Firebase/Promesas";
 import { Usuario } from "../Interface/IUsuario";
 
 const estadoInicial:Usuario = {

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
-import { registrarUsuarioAdmin } from "./Firebase/Promesas";
+import { registrarUsuarioAdmin } from "../styles/Firebase/Promesas";
 import { Usuarioadmin } from "../Interface/IUsuarioadmin";
 import Link from "next/link";
 
