@@ -53,6 +53,7 @@ export const PaginaActualizar = ()=>{
                 <Form.Label>Nombre</Form.Label>
                 <Form.Control type="text" placeholder="Ingrese su nombre: " 
                 name ="nombre"
+                value={usuario.nombre}
                 onChange={(e)=>{handlePersona(e.currentTarget.name,e.currentTarget.value)}} />
                 <Form.Text></Form.Text>
             </Form.Group>
@@ -60,6 +61,7 @@ export const PaginaActualizar = ()=>{
                 <Form.Label>Contraseña</Form.Label>
                 <Form.Control type="password" placeholder="Ingrese contraseña: " 
                 name ="password"
+                value={usuario.password}
                 onChange={(e)=>{handlePersona(e.currentTarget.name,e.currentTarget.value)}} />
                 <Form.Text></Form.Text>
             </Form.Group>
@@ -67,6 +69,7 @@ export const PaginaActualizar = ()=>{
                 <Form.Label>Correo</Form.Label>
                 <Form.Control type="email" placeholder="Ingrese su correo: " 
                 name ="correo"
+                value={usuario.correo}
                 onChange={(e)=>{handlePersona(e.currentTarget.name,e.currentTarget.value)}} />
                 <Form.Text></Form.Text>
             </Form.Group>
@@ -74,6 +77,7 @@ export const PaginaActualizar = ()=>{
                 <Form.Label>Telefono</Form.Label>
                 <Form.Control type="text" placeholder="Ingrese su telefono " 
                 name ="telefono"
+                value={usuario.telefono}
                 onChange={(e)=>{handlePersona(e.currentTarget.name,e.currentTarget.value)}} />
                 <Form.Text></Form.Text>
             </Form.Group>
@@ -81,6 +85,7 @@ export const PaginaActualizar = ()=>{
                 <Form.Label>Edad</Form.Label>
                 <Form.Control type="number" placeholder="Ingrese su edad: " 
                 name ="edad"
+                value={usuario.edad}
                 onChange={(e)=>{handlePersona(e.currentTarget.name,e.currentTarget.value)}} />
                 <Form.Text></Form.Text>
             </Form.Group>
@@ -102,7 +107,7 @@ export const PaginaActualizar = ()=>{
                 id="custom-switch"
             />
             <Form.Label>Color</Form.Label>
-            <Form.Select aria-label="Default select example" name="color" onChange={(e)=>{handlePersona(e.currentTarget.name,e.currentTarget.value)}}>
+            <Form.Select aria-label="Default select example" name="color" value={usuario.color} onChange={(e)=>{handlePersona(e.currentTarget.name,e.currentTarget.value)}}>
                 <option>...</option>
                 <option value="Rojo">Rojo</option>
                 <option value="Verde">Verde</option>
@@ -110,7 +115,7 @@ export const PaginaActualizar = ()=>{
             </Form.Select>
             <Form.Group>
                 <Form.Label>Comentario</Form.Label>
-                <Form.Control name="comentario" as="textarea" rows={3} placeholder="Deja tu comentario" onChange={(e)=>{handlePersona(e.currentTarget.name,e.currentTarget.value)}}/>
+                <Form.Control name="comentario" as="textarea" value={usuario.comentario} rows={3} placeholder="Deja tu comentario" onChange={(e)=>{handlePersona(e.currentTarget.name,e.currentTarget.value)}}/>
             </Form.Group>
             <Link href={{pathname:"PaginaTabla"}}>
             <Button type="button" variant="success" onClick={actualizar} style={{ width:"100%", paddingBlock:"20px", fontSize:"20px"}}>Registrar</Button>
