@@ -33,7 +33,7 @@ export const PaginaActualizar = ()=>{
 
     useEffect(()=>{
         const key = router.query.key;
-        if (key!=undefined && typeof(key)=="string"){
+        if(key!=undefined && typeof(key)=="string"){
             obtenerUsuario(key).then((p)=>{
                 if(p!=undefined){
                     setusuario(p)
@@ -42,8 +42,7 @@ export const PaginaActualizar = ()=>{
                     //Volver a la tabla
                 }
             })
-        }
-        else{
+        }else{
             //Volver a la tabla
         }
     },[])
