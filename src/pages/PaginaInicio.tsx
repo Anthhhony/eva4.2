@@ -1,29 +1,20 @@
-import React, { useEffect, useState } from "react";
-
-import { Button, Container, Form, Modal, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Overlay, OverlayTrigger } from "react-bootstrap";
+import React, { useState } from "react";
 import Link from "next/link";
-import { Usuarioadmin } from "../Interface/IUsuarioadmin";
-import { buscarContraseña, obtenerUsuario, obtenerUsuarios } from "./Firebase/Promesas";
+import { Button, Container, Form, Modal, ModalFooter } from "react-bootstrap";
 
-
-export default function Home() {
-    const estadoInicial:Usuarioadmin = {
-        nombre:"",
-        password:"",
-        key:""
-    }
+export const PaginaInicio = ()=>{
     const [show1, setShow1] = useState(false);
     const [show2, setShow2] = useState(false);
 
-        const handleClose1 = () => setShow1(false);
-        const handleShow1 = () => setShow1(true);
-        const handleClose2 = () => setShow2(false);
-        const handleShow2 = () => setShow2(true);
-        const [errorP, seterrorP] = useState("")
-        const [BotonR, setBotonR] = useState(<p></p>)
-        const [nom, setnom] = useState("")
-        
+    const handleClose1 = () => setShow1(false);
+    const handleShow1 = () => setShow1(true);
+    const handleClose2 = () => setShow2(false);
+    const handleShow2 = () => setShow2(true);
 
+    const [errorP, seterrorP] = useState("")
+    const [BotonR, setBotonR] = useState(<p></p>)
+    const [nom, setnom] = useState("")
+    
 
         const validarVacio = (valor:string)=>{
             if (valor.trim().length == 0){
@@ -37,20 +28,19 @@ export default function Home() {
             }
         }
 
-        const validarContra = (valor:string) =>{
-            if (valor == "Abcd1234"){
-            seterrorP("")
-            setBotonR(<Button variant='primary'>Ingresar</Button>)
-            }
-            else {
-            seterrorP("Contraseña incorrecta")
-            setBotonR(<p></p>)
-            }
+    const validarContra = (valor:string) =>{
+        if (valor == "Abcd1234"){
+        seterrorP("")
+        setBotonR(<Button variant='primary'>Ingresar</Button>)
         }
-
+        else {
+        seterrorP("Contraseña incorrecta")
+        setBotonR(<p></p>)
+        }
+    }
     return (
         <>
-          <Container className="contenedorInputsinicio">
+        <Container className="contenedorInputsinicio">
           <Button variant="outline-light" className="inputEntrar1" onClick={handleShow1} >Registrar usuario</Button>{' '}
           <Button variant="outline-light" className="inputEntrar2" onClick={handleShow2} >Tematica</Button>{' '}
           </Container>
@@ -108,7 +98,7 @@ export default function Home() {
                     <Link href={{pathname:"Pagina1", query:{nombre:nom}}}>
                         {BotonR}
                     </Link>
-                </ModalFooter>
+                </ModalFooter>s
             </Modal>
         <div className="contenedorInicio1">
             <div className="contenedorInicio2">
@@ -117,5 +107,6 @@ export default function Home() {
         <h1 className="tituloInicio">Mortal Kompany</h1>
         </div>
         </>
-  )
+    )
 }
+export default PaginaInicio
